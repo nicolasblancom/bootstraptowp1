@@ -5,7 +5,12 @@
         </footer>
     </div> <!-- /container -->
 
-    <?php wp_footer(); ?>
-    
+    <?php
+
+    // wp_footer action hook
+    wp_footer();
+
+    ?>
+
 </body>
 </html>

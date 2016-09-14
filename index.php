@@ -1,3 +1,4 @@
+<!-- the header -->
 <?php get_header(); ?>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -29,4 +30,5 @@
             </div>
         </div>
 
+<!-- the footer -->
 <?php get_footer(); ?>

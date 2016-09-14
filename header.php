@@ -11,7 +11,12 @@
 
     <title>Jumbotron Template for Bootstrap</title>
 
-    <?php wp_head(); ?>
+    <?php
+
+    // wp_head action hook
+    wp_head();
+
+    ?>
 
 </head>
 

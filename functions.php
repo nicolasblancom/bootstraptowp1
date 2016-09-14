@@ -1,5 +1,6 @@
 <?php
 
+// loads theme css files
 function bttowp_theme_styles(){
 
     // main bootstrap stylesheet
@@ -11,6 +12,7 @@ function bttowp_theme_styles(){
 }
 add_action( 'wp_enqueue_scripts', 'bttowp_theme_styles' );
 
+// loads theme js files
 function bttowp_theme_js(){
 
     global $wp_scripts;
