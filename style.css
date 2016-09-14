@@ -17,3 +17,6 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+/* If logged in, add space for admin bar */
+.logged-in .navbar-fixed-top { margin-top: 30px; }

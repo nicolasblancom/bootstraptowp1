@@ -34,3 +34,6 @@ function bttowp_theme_js(){
 
 }
 add_action( 'wp_enqueue_scripts', 'bttowp_theme_js' );
+
+// removes admin bar when user logged in
+//add_filter( 'show_admin_bar', '__return_false' );
