@@ -50,3 +50,20 @@ function bttowp_register_theme_menus(){
     );
 }
 add_action( 'init', 'bttowp_register_theme_menus' );
+
+// create widget areas
+function bttowp_create_widget( $name, $id, $description ){
+    register_sidebar( array(
+        'name' => $name,
+        'id' => $id,
+        'description' => __( $description ),
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
+# frontpage widgets
+bttowp_create_widget( __('Front Page Left', 'bttowp'), 'front-left', __( 'Displays on the left of the homepage' ));
+bttowp_create_widget( __('Front Page Center', 'bttowp'), 'front-center', __( 'Displays on the center of the homepage' ));
+bttowp_create_widget( __('Front Page Right', 'bttowp'), 'front-right', __( 'Displays on the right of the homepage' ));
