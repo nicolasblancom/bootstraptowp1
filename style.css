@@ -98,3 +98,11 @@ body {
         margin: auto;
     }
 }
+
+/* Portfolio Single Page Pagination */
+.single-portfolio .prev-next .glyphicon { vertical-align: -3px; }
+.single-portfolio .prev-next a[rel='prev'] { margin-right: 15px; }
+.single-portfolio .prev-next a[rel='next'] { margin-left: 15px; }
+@media all and (min-width: 768px) {
+    .single-portfolio .prev-next.h4 { margin-top: 30px; }
+}
