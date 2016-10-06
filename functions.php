@@ -70,3 +70,6 @@ bttowp_create_widget( __('Front Page Right', 'bttowp'), 'front-right', __( 'Disp
 
 # page widgets
 bttowp_create_widget( __( 'Page Sidebar', 'bttowp' ), 'page', __( 'Displays on the side of pages with a sidebar', 'bttowp' ) );
+
+# blog widgets
+bttowp_create_widget( __( 'Blog Posts Page Sidebar', 'bttowp' ), 'blog', __( 'Displays on the side of the blog posts listing page', 'bttowp' ) );
