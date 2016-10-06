@@ -90,3 +90,11 @@ body {
 
 /* Comment form */
 .comment-form label { display: block; }
+
+/* Portfolio Page featured image */
+@media all and (max-width: 768px) {
+    .portfolio-piece .featured-img {
+        max-width: 80%;
+        margin: auto;
+    }
+}

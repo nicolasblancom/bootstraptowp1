@@ -38,8 +38,12 @@ add_action( 'wp_enqueue_scripts', 'bttowp_theme_js' );
 // removes admin bar when user logged in
 //add_filter( 'show_admin_bar', '__return_false' );
 
-// activate menus theme functionality
+// activate theme functionality
+# activate menus
 add_theme_support( 'menus' );
+
+# activate featured images
+add_theme_support( 'post-thumbnails' );
 
 // create menus
 function bttowp_register_theme_menus(){
