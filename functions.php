@@ -67,3 +67,6 @@ function bttowp_create_widget( $name, $id, $description ){
 bttowp_create_widget( __('Front Page Left', 'bttowp'), 'front-left', __( 'Displays on the left of the homepage' ));
 bttowp_create_widget( __('Front Page Center', 'bttowp'), 'front-center', __( 'Displays on the center of the homepage' ));
 bttowp_create_widget( __('Front Page Right', 'bttowp'), 'front-right', __( 'Displays on the right of the homepage' ));
+
+# page widgets
+bttowp_create_widget( __( 'Page Sidebar', 'bttowp' ), 'page', __( 'Displays on the side of pages with a sidebar', 'bttowp' ) );

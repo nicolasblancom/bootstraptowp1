@@ -73,3 +73,14 @@ body {
 	color: #fff;
 	font-weight: bold;
 }
+
+/* Sidebars */
+.sidebar {
+    margin-top: 40px;
+    color: #444;
+}
+.sidebar .title{
+    color: #888;
+}
+
+.widget { margin: 0 0 30px; }
