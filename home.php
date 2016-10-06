@@ -22,13 +22,13 @@
 
                     <article class="post">
                         <h2><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                        <p>
+                        <p><em>
                             By <?php the_author(); ?>
                             on <?php the_time( get_option('date_format') ); ?>
                             at <?php the_time( get_option('time_format') ); ?>
                             in <?php the_category( ', ' ); ?>.
                             <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
-                        </p>
+                        </em></p>
 
                         <?php the_excerpt(); ?>
                     </article>
