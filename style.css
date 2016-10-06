@@ -87,3 +87,6 @@ body {
 
 /* Blog Posts */
 .post { margin: 10px 0 50px; }
+
+/* Comment form */
+.comment-form label { display: block; }
