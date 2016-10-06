@@ -73,3 +73,6 @@ bttowp_create_widget( __( 'Page Sidebar', 'bttowp' ), 'page', __( 'Displays on t
 
 # blog widgets
 bttowp_create_widget( __( 'Blog Posts Page Sidebar', 'bttowp' ), 'blog', __( 'Displays on the side of the blog posts listing page', 'bttowp' ) );
+
+#archive widgets
+bttowp_create_widget( __( 'Archive Listing Page Sidebar', 'bttowp' ), 'archive', __( 'Displays on the side of the archive listing page. If nothing added here, archive page will show "Blog Posts Page Sidebar" widgets', 'bttowp' ) );
