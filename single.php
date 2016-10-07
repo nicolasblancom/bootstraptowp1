@@ -15,6 +15,22 @@
 
                     <div class="page-header">
                         <h1><?php the_title(); ?></h1>
+
+                        <?php if( has_post_thumbnail() ) : ?>
+                            <!-- Featured image -->
+                            <?php
+
+                            // Fetch image data
+                            $thumbnail_id = get_post_thumbnail_id(); // get the featured image id
+                            $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true ); // get the featured image src url
+                            $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true ); // get meta data
+
+                            ?>
+
+                            <img src="<?php echo $thumbnail_url[0] ?>" alt="<?php echo $thumbnail_meta; ?>" class="img-responsive featured-img" />
+
+                        <?php endif; ?>
+
                         <p><em>
                             By <?php the_author(); ?>
                             on <?php the_time( get_option('date_format') ); ?>
