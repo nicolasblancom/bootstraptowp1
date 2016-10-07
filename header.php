@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -32,20 +32,26 @@
                 </button>
                 <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+
 
                 <?php
 
-                // show here a menu
+                // show here a menu using a bootstrap menu nav walker
                 $args = array(
-                    'menu' => 'header-menu',
-                    'menu_class' => 'nav navbar-nav',
-                    'container' => false
+                    'menu'              => 'header-menu',
+                    'theme_location'    => 'header-menu',
+                    'depth'             => 2,
+                    'container'         => 'div',
+                    'container_class'   => 'collapse navbar-collapse',
+                    'container_id'      => 'navbar',
+                    'menu_class'        => 'nav navbar-nav',
+                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                    'walker'            => new wp_bootstrap_navwalker()
                 );
                 wp_nav_menu( $args );
 
                 ?>
 
-            </div><!--/.navbar-collapse -->
+
         </div>
     </nav>

@@ -45,11 +45,14 @@ add_theme_support( 'menus' );
 # activate featured images
 add_theme_support( 'post-thumbnails' );
 
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');
+
 // create menus
 function bttowp_register_theme_menus(){
     register_nav_menus(
         array(
-            'header-menu' => __( 'Header Menu' )
+            'header-menu' => __( 'Header Menu', 'bttowp' )
         )
     );
 }
