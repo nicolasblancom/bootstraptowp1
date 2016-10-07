@@ -18,30 +18,48 @@
                     <h1><?php wp_title( '' ); ?></h1>
                 </div>
 
+                <?php
+
+                // create new WP_Query for slider
+                $args = array(
+                    'post_type' => 'post',
+                    'category_name' => 'featured'
+                );
+                $the_query = new WP_Query( $args );
+
+                ?>
+
                 <!-- bootstrap slider -->
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <?php if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                            <li
+                                data-target="#carousel-example-generic"
+                                data-slide-to="<?php echo $the_query->current_post; ?>"
+                                class="<?php if( $the_query->current_post == 0 ) : ?>active<?php endif; ?>">
+                            </li>
+                        <?php endwhile; endif; ?>
                     </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="..." alt="...">
-                            <div class="carousel-caption">
-                                ...
+                        <?php if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                            <div class="item<?php if( $the_query->current_post == 0 ) : ?> active<?php endif; ?>">
+
+                                <?php
+
+                                // Fetch image data
+                                $thumbnail_id = get_post_thumbnail_id(); // get the featured image id
+                                $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true ); // get the featured image src url
+                                $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true ); // get meta data
+
+                                ?>
+
+                                <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumbnail_url[0] ?>" alt="<?php echo $thumbnail_meta; ?>" class="img-responsive featured-img" /></a>
+                                <div class="carousel-caption"><?php the_title(); ?></div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img src="..." alt="...">
-                            <div class="carousel-caption">
-                                ...
-                            </div>
-                        </div>
-                        ...
+                        <?php endwhile; endif; ?>
                     </div>
 
                     <!-- Controls -->
