@@ -3,8 +3,14 @@
 
     <div class="container">
 
-        <div class="row">
+        <div class="row row-offcanvas row-offcanvas-right">
             <div class="col-md-9">
+
+                <!-- off canvas content toggle button -->
+                <p class="pull-right visible-xs">
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle sidebar</button>
+                </p>
+
                 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
                     <div class="page-header">
