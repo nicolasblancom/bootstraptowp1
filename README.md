@@ -68,6 +68,9 @@ This theme has 6 widget areas:
 - 'Blog Posts Page Sidebar': shows on blog posts listing page
 - 'Archive Listing Page Sidebar': shows on all archive pages
 
+**Blog Post Slider**
+On the Blog Posts Index page, there is a featured posts slider. It grabs the posts under the 'featured' category and make a slider using Bootstrap Components. Every blog post under that category will be added to the slider.
+
 **Need some customized JS code?**
 Add it to the `js/theme.js` file inside the theme folder. It will be enqueued correctly before the closing `body` tag via functions.php so you don't need to add files manually.
 
