@@ -21,59 +21,6 @@ body {
 /* If logged in, add space for admin bar */
 .logged-in .navbar-fixed-top { margin-top: 30px; }
 
-/* Navigation menu: recreate wp '.current-menu-item' for '.active' css class from bootstrap */
-.navbar-inverse .navbar-nav > .current-menu-item > a,
-.navbar-inverse .navbar-nav > .current-menu-item > a:focus,
-.navbar-inverse .navbar-nav > .current-menu-item > a:hover {
-    color: #fff;
-    background-color: #080808;
-}
-
-/* Nested menus, fix for bootstrap */
-
-@media (min-width:768px) {
-	.sub-menu {
-		display: none;
-		background: #222;
-		padding: 10px 15px;
-		width: 200px;
-	}
-
-    /* First submenu */
-	ul.nav > li.menu-item-has-children:hover > .sub-menu {
-        display: block;
-        position: absolute;
-    }
-
-    /* After first submenus */
-    ul.sub-menu > li.menu-item-has-children:hover > .sub-menu {
-        display: block;
-        position: relative;
-        width: 100%;
-    }
-
-}
-
-.sub-menu li {
-	margin-bottom: 10px;
-	list-style: none;
-}
-
-.sub-menu li:last-child { margin-bottom: 0; }
-
-.sub-menu a  {
-	color: #999;
-	text-decoration: none;
-}
-
-.sub-menu a:hover { color: #fff; }
-
-.current-menu-parent li a { background: inherit; }
-.current-menu-parent .current-menu-item a {
-	color: #fff;
-	font-weight: bold;
-}
-
 /* Sidebars */
 .sidebar {
     margin-top: 40px;
