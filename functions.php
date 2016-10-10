@@ -32,6 +32,9 @@ function bttowp_theme_js(){
     wp_enqueue_script( 'bootstrap_main_js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '', true );
     wp_enqueue_script( 'bootstrap_ie10hack_js', get_template_directory_uri() . '/js/ie10-viewport-bug-workaround.js' );
 
+    // javascript bootstrap components
+    wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/js/theme.js', array( 'jquery', 'bootstrap_main_js' ), '', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'bttowp_theme_js' );
 
